@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema completo de registro</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Sistema completo de registro</h1>
+    <div id="mensajes"></div>
+    <section class="tarjeta" id="registro">
+      <h2>Crear cuenta</h2>
+      <form id="formregistro" novalidate>
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" required />
+
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo" required />
+
+        <label for="celular">Numero de celular</label>
+        <input type="tel" id="celular" required />
+
+        <label for="contrasena">Contraseña</label>
+        <div class="filaContraseña">
+          <input type="password" id="contrasena" required />
+          <button type="button" class="mostrarcontraseña" data-target="contrasena">👁️</button>
+        </div>
+
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
+    <section class="tarjeta" id="login">
+      <h2>Iniciar sesion</h2>
+      <form id="formlogin" novalidate>
+        <label for="logcorreo">Correo electronico</label>
+        <input type="email" id="logcorreo" required />
+
+        <label for="logcontrasena">Contraseña</label>
+        <div class="filaContraseña">
+          <input type="password" id="logcontrasena" required />
+          <button type="button" class="mostrarcontraseña" data-target="logcontrasena"> 👁️</button>
+        </div>
+
+        <div class="filaEntre">
+          <button type="submit">Entrar</button>
+          <a href="#" id="recuperar">olvidaste tu contraseña?</a>
+        </div>
+      </form>
+    </section>
+    <section class="tarjeta ocultar" id="recuperarcontrasena">
+      <h2>Recuperar contraseña</h2>
+
+      <form id="formrecuperar" novalidate>
+        <label for="recorreo">Correo ya registrado</label>
+        <input type="email" id="recorreo" required />
+
+        <label for="reccontrasena">Nueva contraseña</label>
+        <div class="filaContraseña">
+          <input type="password" id="reccontrasena" required />
+          <button type="button" class="mostrarcontraseña" data-target="reccontrasena">👁️</button>
+        </div>
+
+        <button type="submit">Actualizar</button>
+      </form>
+      <a href="#" id="volverlogin">Volver a iniciar sesion</a>
+    </section>
+    <section class="tarjeta ocultar" id="bienvenida">
+      <h2 id="mensajebienvenida"></h2>
+      <button id="salir">Cerrar sesion</button>
+    </section>
+  </main>
+  <script src="../JS/main.js"></script>
+</body>
+</html>
